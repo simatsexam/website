@@ -1,0 +1,17 @@
+#include <stdio.h>
+
+int main() {
+    int n,i,j,s,a[10][10],v[10]={0},q[10],f=0,r=-1;
+    scanf("%d",&n);
+    for(i=0;i<n;i++) for(j=0;j<n;j++) scanf("%d",&a[i][j]);
+    scanf("%d",&s);
+
+    q[++r]=s; v[s]=1;
+    while(f<=r){
+        s=q[f++]; printf("%d ",s);
+        for(i=0;i<n;i++)
+            if(a[s][i] && !v[i])
+                q[++r]=i, v[i]=1;
+    }
+    return 0;
+}
