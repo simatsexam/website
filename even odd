@@ -1,0 +1,40 @@
+#include <stdio.h>
+
+int main()
+{
+    int n, i, a[20];
+
+    printf("Enter number of elements: ");
+    scanf("%d", &n);
+
+    printf("Enter %d numbers:\n", n);
+    for(i = 0; i < n; i++)
+        scanf("%d", &a[i]);
+
+    printf("\nResult:\n");
+    for(i = 0; i < n; i++)
+    {
+        if(a[i] % 2 == 0)
+            printf("%d is Even\n", a[i]);
+        else
+            printf("%d is Odd\n", a[i]);
+    }
+
+    return 0;
+}
+
+
+input:
+Enter number of elements: 5
+Enter 5 numbers:
+1 2 3 4 5
+
+
+output:
+1 is Odd
+2 is Even
+3 is Odd
+4 is Even
+5 is Odd
+
+
